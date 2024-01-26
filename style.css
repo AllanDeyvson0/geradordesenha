@@ -166,11 +166,11 @@ body{
         width: 32rem;
     }
 
-    .container-password:hover{
+    .container-pass-grid:hover{
         transform: none;
     }
 
-    .container-password:hover .password{
+    .container-pass-grid:hover .password{
         transform: none;
     }
 
