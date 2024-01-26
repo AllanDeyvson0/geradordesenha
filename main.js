@@ -24,13 +24,32 @@ function generatePassword(){
     containerPassword.classList.remove("hide");
     password.innerHTML = pass;
     novaSenha = pass;
+
+    //RETORNANDO ÍCONE DE BI-COPY
+    let svgIcon = document.getElementById("icon-svg");
+    svgIcon.innerHTML = '<path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>';
+    svgIcon.classList.remove("bi-check2");
+    svgIcon.classList.add("bi-copy");
 }
 
 
 //FUNÇÃO COPIAR SENHA
 function copyPassword(){
     navigator.clipboard.writeText(novaSenha);
-    alert("Senha copiada com sucesso!\nNão compartilhe com ninguém.")
+    alert("Senha copiada ✔ \nNão compartilhe com ninguém!")
+
+    //SUBSTITUIR ÍCONE PARA CHECK
+    let svgIcon = document.getElementById("icon-svg");
+    svgIcon.innerHTML = '<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>';
+    svgIcon.classList.remove("bi-copy");
+    svgIcon.classList.add("bi-check2");
+
+    //TEMPO DE 3 SEGUNDOS
+    setTimeout(function() {
+        svgIcon.innerHTML = '<path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>';
+        svgIcon.classList.remove("bi-check2");
+        svgIcon.classList.add("bi-copy");
+    }, 3000);
 }
 
 

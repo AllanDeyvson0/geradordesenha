@@ -15,6 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .title{
@@ -87,6 +88,7 @@ body{
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    justify-content: center;
 }
 
 .title-2{
@@ -97,22 +99,27 @@ body{
     margin-bottom: 15px;
 }
 
-.password{
+.container-pass-grid{
     height: 60px;
     background-color: rgba(0,0,0, 0.4);
-    border-radius: 4px;
-    color: var(--secondary-color);
-    border: 1px solid #313131;
-    transition: 0.3s;
-    font-size: 6em;
-    
-    /* ALINHAMENTO */
-    display: flex;
+    margin: 7px auto;
+    display: grid;
+    grid-template-columns: 3.5fr 0.5fr;
     align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: var(--secondary-color);
+}
+
+.password{
+    border-radius: 4px;
+    transition: 0.3s;
+    align-items: center;
+    font-size: 8.3em;
     justify-content: center;
 }
 
-.password:hover{
+.container-pass-grid:hover{
     transform: scale(1.05);
 }
 
@@ -120,7 +127,6 @@ body{
     color: var(--secondary-color);
     position: relative;
     top: 20px;
-    padding: 6px 8px;
     text-align: center;
     font-size: 16px;
     border-radius: 6px;
@@ -174,6 +180,6 @@ body{
     }
 
     .password{
-        font-size: 4.5em;
+        font-size: 6.5em;
     }
 }
