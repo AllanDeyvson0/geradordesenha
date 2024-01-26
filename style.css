@@ -1,0 +1,186 @@
+*{
+    font: 200 62.5% 'Montserrat', sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    --primary-color: #3EB72B;
+    --secondary-color: #FFF;
+}
+
+body{
+    background-color: #18181B;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    max-width: 600px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 7.8em;
+    color: var(--primary-color);
+    font-family: 'Play';
+}
+
+.subtitle{
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--secondary-color);
+    opacity: 0.5;
+    font-size: 3em;
+}
+
+.subtitle a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.container-input{
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+.container-input span{
+    color: var(--secondary-color);
+    font-size: 22px;
+}
+
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    background: var(--secondary-color);
+    height: 9px;
+    outline: none;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.button-cta{
+    height: 55px;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.button-cta:hover{
+    filter: brightness(0.8);
+}
+
+.container-password{
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.title-2{
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.password{
+    height: 60px;
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    border: 1px solid #313131;
+    transition: 0.3s;
+    font-size: 8em;
+    text-align: center;
+    position: relative;
+}
+
+.password span{
+    margin-right: 20px;
+}
+
+.password:hover{
+    transform: scale(1.05);
+}
+
+.tooltip{
+    color: var(--secondary-color);
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hide{
+    display: none;
+}
+
+.container-password:hover .tooltip{
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
+
+.bi-copy{
+    color: var(--secondary-color);
+    position: absolute;
+    left: 11em;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px){
+    body{
+        width: 60em;
+    }
+
+    .title{
+        font-size: 6em;
+    }
+
+    .subtitle{
+        font-size: 2.5em;
+    }
+
+    .bi-copy{
+        left: 8.5em;
+    }
+
+    .container-password{
+        width: 38rem;
+    }
+
+    .container-password:hover{
+        transform: none;
+    }
+
+    .container-password:hover .password{
+        transform: none;
+    }
+
+    .tooltip{
+        visibility: visible;
+        opacity: 1;
+    }
+}
